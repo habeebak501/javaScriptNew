@@ -1,0 +1,18 @@
+<script>
+
+var newURL = window.location.protocol + "://" + window.location.host + "/" + window.location.pathname;
+document.write(newURL+"<br>");
+document.write(".............................."+"<br>");
+var url = window.location.href;
+document.write(url+"<br>");
+document.write(".............................."+"<br>");
+var protocal = window.location.protocol;
+document.write("protocol is: "+protocal+"<br>");
+document.write(".............................."+"<br>");
+var hostname = window.location.host;
+document.write("hostname is: "+hostname+"<br>");
+document.write(".............................."+"<br>");
+var pathname = window.location.pathname;
+   document.write("pathname is: "+pathname+"<br>");
+<href
+</script>

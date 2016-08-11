@@ -1,0 +1,13 @@
+<script>
+var input=Number(prompt("enter the number:"));
+var message="";
+if(input%2==0)
+{
+message="the number is even";
+}
+else
+{
+message="the number is odd";
+}
+alert(message);
+</script>

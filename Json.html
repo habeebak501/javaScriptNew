@@ -1,0 +1,37 @@
+<html>
+<title>json</title>
+<body>
+<p id = "demo"></p>
+<p id ="demo1"></p>
+<p id ="demo2"></p>
+<script>
+var text = [
+
+{"author":"habeeb","publication":"how","content":"are u???????????"},  
+{"author":"vamshi","publication":"what","content":"are r u dng"}, 
+{"author":"raju","publication":"doing","content":"programs"}  ] ;
+           var i;
+          function myfunction(i){
+            
+
+        document.write(text[i].author + " " +text[i].publication + " " +text[i].content +"<br>");
+               // setTimeout(myfunction,2000,0);
+               if( i <= text.length){                    
+               document.write(i+"<br>");
+                         i++;
+                   setTimeout(myfunction,2000,i);
+                         // i++;
+         }
+           	  
+            //i++;
+     }
+             // myfunction(0);
+           
+      setTimeout(myfunction,2000,0);
+
+    
+
+</script>
+
+</body>
+</html>

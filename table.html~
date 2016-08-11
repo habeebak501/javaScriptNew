@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+<center>
+<input type="button" value="Add row" onClick="appendRow()" />
+<input type="button" value="Add column" onClick="addColumn()" />
+<input type="button" value="Delete column" onClick="deleteColumn()" />
+<br>
+<table id="my_table" align="center" border="2" cellpadding="0" cellspacing="0">
+<thead><tr>
+<th>Select</th>
+<th>Name</th>
+<th>City</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><input type="text" /></td>
+<td><input type="text" /></td>
+<td><input type ="text" /></td>
+</tr>
+
+<tr>
+<td><input type="text" / ></td>
+<td><input type="text" /></td>
+<td><input type ="text" /></td>
+</tr>
+</tbody></table></center>
+<script>
+// append row to the HTML table
+function appendRow() {
+     	var table = document.getElementById('my_table'); //html table
+
+ 	var rowCount = table.rows.length; //no. of rows in table
+
+ 	var columnCount =  table.rows[0].cells.length; //no. of columns in table         
+
+ 	var row = table.insertRow(rowCount); //insert a row           
+  
+ 	var cell1 = row.insertCell(0); //create a new cell          
+ 	var element1 = document.createElement("input"); //create a new element          
+	cell1.appendChild(element1); //append element to cell
+	var cell2 = row.insertCell(1);           
+        var element2 = document.createElement("input");           
+        cell2.appendChild(element2);          
+ 	var cell3 = row.insertCell(2);           
+ 	var element3 = document.createElement("input");
+ 	cell3.appendChild(element3); 
+ //Add the cells for more than 3 columns
+
+ if(columnCount >= 3){
+
+   for (var i=4; i<=columnCount; i++) {
+
+   var newCel = row.insertCell(i-1); //create a new cell          
+
+   var element = document.createElement("div"); //create a div element
+
+   var txt = document.createTextNode("cell "+i); //create a text element
+
+   element.appendChild(txt); //append text to div     
+
+   newCel.appendChild(element); //appent div to cell
+
+  }
+
+ }
+
+}
+</script>
+</BODY>
+</HTML>
