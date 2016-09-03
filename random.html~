@@ -1,0 +1,11 @@
+<script>
+var n=prompt("enter the numbers size:");
+function random1(){
+
+for(var i=1;i<n;i++){
+var ramdomnum = Math.floor(Math.random() * i);
+document.write(ramdomnum+"<br>");
+}
+}
+random1();
+</script>

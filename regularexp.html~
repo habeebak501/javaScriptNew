@@ -1,0 +1,6 @@
+<script>
+var regex = /[,:.]/;       // delimiters are comma, colon, and period
+var str = 'Tim:20,Henry:30.Linda:35';
+document.write(str.split(regex));   // => [Tim,20,Henry,30,Linda,35]
+</script>
+

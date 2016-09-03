@@ -1,0 +1,44 @@
+<script>
+var myList=[ ];
+var n=prompt("enter the 2Darry size:");
+//var arr =[ ];
+for(var i=0;i<n;i++){
+for(var j=0;j<n;j++){
+var arr=[];
+arr[0]=prompt("enter the string(fruits or choclates):");
+arr[1]=prompt("enter the quality:");
+myList.push(arr); //adding end of the array 
+}
+}
+document.write(typeof myList+"<br>");
+document.write(myList+"<br>");
+var arr1 =[['habeeb'],[50]];
+myList.unshift(arr1);//adding front of the array
+document.write(myList+"<br>");
+
+document.write("Display the array elements:"+"<br>");
+for(var i=0;i<myList.length;i++){
+for(var j=0;j<2;j++){
+document.write("index"+"["+i+"]"+"["+j+"]"+myList[i][j]+ "<br>");
+}
+}
+document.write("......................." +"<br>");
+document.write("shift operation perform on array"+"<br>");
+var myShift = myList.shift();//pop the front of the array
+document.write("after shift perform array"+"<br>"+myList+"<br>");
+document.write("shifted element is "+"<br>"+myShift+"<br>");
+document.write("........................"+"<br>");
+document.write("Display the array elements:"+"<br>");
+document.write(myList+"<br>");
+document.write("........................"+"<br>");
+document.write("pop the array"+"<br>"); 
+var poped =myList.pop();//pop the end of the array
+document.write("pop the array element is"+"<br>"+poped+"<br>");
+document.write("........................"+"<br>");
+document.write("Display the array elements:"+"<br>");
+for(var i=0;i<n;i++){
+for(var j=0;j<2;j++){
+document.write("index"+"["+i+"]"+"["+j+"]"+myList[i][j]+ "<br>");
+}
+}
+</script>

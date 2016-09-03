@@ -1,0 +1,9 @@
+<script>
+var arr1=[['habeeb',10],['hhhh',20],['aaaa',30]];
+document.write(arr1+"<br>");
+var arr2 =[['akkar',50]];
+arr1.push(arr2);
+document.write(arr1+"<br>");
+arr1.unshift(arr2);
+document.write(arr1+"<br>");
+</script>

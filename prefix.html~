@@ -1,0 +1,11 @@
+<script>
+var console ={num:"bridgeit"};
+function log(){
+  var args = Array.prototype.slice.call(arguments);
+  //args.unshift('(app)');
+  console.log.apply(console.num, args);
+}
+
+//log('Bridgelabz'); //(app) my message
+console.log( 'your message'); //(app) my message your message 
+        </script>

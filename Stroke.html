@@ -1,0 +1,51 @@
+/** *@fileName:Stroke.html
+*@createBy:habeeb
+ *@date:
+ *@purpose:To Show Standard Coding Convention */
+
+<script>
+    /**
+     *@constructor
+     *@this{number}-stroke
+     *@this{number}-pars
+     */
+    var stock = function() {
+        this.stroke = 0;
+        this.pars = 0;
+    };
+    /**
+     *@constructor
+     *@param{number}-stroke passing the value of function
+     *@param{number}-pars passing the value of function
+     */
+    stock.prototype.fun = function(stroke, pars) {
+        if (stroke == 1) {
+            document.write("1" + "<br>");
+            return "Hole-in-one!";
+        } else if (stroke <= (pars - 2)) {
+            document.write("2" + "<br>");
+            return "Eagle";
+        } else if (stroke == (pars - 1)) {
+            document.write("3" + "<br>");
+            return "Birdie";
+
+        } else if (stroke == pars) {
+            document.write("4" + "<br>");
+            return "Par";
+        } else if (stroke == (pars + 1)) {
+            document.write("5" + "<br>");
+            return "Bogey";
+
+        } else if (stroke == (pars + 1)) {
+            document.write("6" + "<br>");
+            return "Double Bogey";
+        } else if (stroke >= (pars + 3)) {
+            document.write("7" + "<br>");
+            return "Go Home!";
+        }
+    }
+
+    var abc = new stock();
+    var result = abc.fun(10, 9);
+    document.write(result + "<br>");
+</script>
