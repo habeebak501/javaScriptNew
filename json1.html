@@ -1,3 +1,9 @@
+/**
+*@fileName:json1.html
+*@createBy:Habeeb
+*@date:
+*@purpose:To Show Standard Coding Conversion
+*/
 <html>
 <title>json</title>
 <body>
@@ -10,10 +16,14 @@
 
 var text = [
 
-{"author":"habeeb","publication":"how","content":"are u???????????"},  
-{"author":"vamshi","publication":"what","content":"are r u dng"}, 
-{"author":"raju","publication":"doing","content":"programs"} 
+{"author":"habeeb","publication":"how","content":"are u???????????"},
+{"author":"vamshi","publication":"what","content":"are r u dng"},
+{"author":"raju","publication":"doing","content":"programs"}
  ] ;
+     /**
+     *@constructor
+     *@ the function used to generate the time &date
+     */
 
 		function startTime() {
    		 var today = new Date();
@@ -35,21 +45,21 @@ var text = [
 
               var i;
               function myfunction(i){
-                
+
                var x = document.getElementById("demo1");
                     x.style.color = "red";
                  document.getElementById("demo2").innerHTML = startTime();
                document.getElementById("demo").innerHTML = text[i].author + " " +text[i].publication + " " +text[i].content;
-             
+
               if(i < text.length){
-              i++;           
+              i++;
              //setTimeout('myfunction('+(i)+')',5000);
                 setTimeout(myfunction,5000,i);
               }
-                
+
         }
             //myfunction(0);
-               setTimeout(myfunction,5000,0);   
+               setTimeout(myfunction,5000,0);
 </script>
 </center>
 </body>

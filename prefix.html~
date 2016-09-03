@@ -1,27 +1,42 @@
 <html>
+
 <head>
-<title>bridgeit</title>
+    <title>bridgeit</title>
 </head>
+
 <body>
-<p id = "demo"></p>
-<script>
-var str = {num:"bridgeit:"};
-function myfunction(...args){
-  for(i=0;i<args.length;i++)
-	 document.write(this+" "+args[i]+"<br>");
-	}
-
-	var n = prompt("enter the range:");
-  
-	var x=[];
-	for(var i=0;i<n;i++){
-	 x[i] = prompt("enter the name:");
-      
-    }
-	
-         myfunction.apply(str.num,x);
-	
-</script>
-
+    <p id="demo"></p>
+    <script>
+    var str = {
+        num: "bridgeit:"
+    };
+    /**
+     * decription of function
+     * @param {object}
+     * @rerun 
+     */
+    function myfunction(...args) {
+        for (i = 0; i < args.length; i++) {
+            /**
+             * print every args  
+             */
+            document.write(this + " " + args[i] + "<br>");
+        }
+}
+        var n = prompt("enter the range:"),
+            x = [];
+        for (var i = 0; i < n; i++) {
+            x[i] = prompt("enter the name:");
+        }
+        /**
+         *  we ues apply function
+         * @param {Number} --str.num
+         * @param {array}  --x is array
+         * @ return {}
+         */
+        myfunction.apply(str.num, x);
+    
+    </script>
 </body>
+
 </html>

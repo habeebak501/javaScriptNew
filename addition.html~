@@ -4,7 +4,13 @@
 
   <title>calculation</title>
     <script>
+    /**
+    *Declaring a global variable -ansD
+    */
 		 var ansD = null;
+              /**
+              *@constructor-addNumbers
+              */
                 function addNumbers()
                 {
                         var val1 = parseInt(document.getElementById("value1").value);
@@ -12,6 +18,9 @@
                        // var ansD = document.getElementById("answer");
                         ansD = val1 + val2;
                 }
+                /**
+                *@constructor-multiplication
+                */
                  function multiplication()
                   {
                       var val1 = parseInt(document.getElementById("value1").value);
@@ -19,29 +28,34 @@
                       // var ansD = document.getElementById("answer");
                             ansD = val1 * val2;
                   }
+                  /**
+                  *@constructor-division
+                  */
                         function division()
                   {
                       var val1 = parseInt(document.getElementById("value1").value);
                       var val2 = parseInt(document.getElementById("value2").value);
-                      // var ansD = document.getElementById("answer");
+
                             ansD = val1 / val2;
                   }
-                    
+                    /**
+                    *@constructor-modulation
+                    */
                     function modulation()
                   {
                       var val1 = parseInt(document.getElementById("value1").value);
                       var val2 = parseInt(document.getElementById("value2").value);
-			
+
                       // var ansD = document.getElementById("answer");
                             ansD = val1 % val2;
                   }
                     function calculate()
                      {
 		document.getElementById("answer").value =  ansD;
-                     } 
+                     }
 
 </script>
-      
+
 </head>
 <body>
         value1 = <input type="text" id="value1" name="value1" value="0"/><br/>
@@ -52,8 +66,8 @@
  	 <option onclick="multiplication()">mul</option>
  	 <option onclick="division()">div</option>
  	 <option onclick="modulation()">module</option>
-         
-      </select> 
+
+      </select>
         &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp<input type="button" name="Sumbit" value="clickme" onclick="calculate()"/><br>
         Answer = <input type="text" id="answer" name="answer" />
   </body>

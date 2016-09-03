@@ -1,98 +1,113 @@
+/**
+*@fileName:hashtable.html
+*@createBy:Habeeb
+*@date:
+*@purpose:To Show standard Coding Conversion
+*/
 <script>
-var hashtable=function(){
-this.lower=0;
-this.upper=10;
-this.array=[];
-}
-	hashtable.prototype.insert=function(key,value){
-	var index= this.hashFunction(key,this.upper);
-	var bucket=this.array[index];
-	if(!bucket){
-	
-	bucket=[];
-	this.array[index]=bucket;
-	}
-		var override=false;
-		for(var i=0;i<bucket.length;i++){
-		var touple=bucket[i];
-		if(touple[0]===key){
-		touple[1]=value;
-		override=true;
+	/**
+	 *creating hashtable prototype
+	 *@constructor
+	 *@this{hashtable}
+	 */
+	var hashtable = function() {
+			/***@private*/
+			this.lower = 0;
+			/***@private*/
+			this.upper = 10;
+			/***@private*/
+			this.array = [];
 		}
+		/**
+		 *@constructor
+		 *@param{number}-key
+		 *@param{string}-value
+		 */
+	hashtable.prototype.insert = function(key, value) {
+/***@private*/	var index = this.hashFunction(key, this.upper);
+	/***@private*/	var bucket = this.array[index];
+		if (!bucket) {
+
+			bucket = [];
+			this.array[index] = bucket;
 		}
-		if(!override){
-		bucket.push([key,value]);
-		this.lower++;
-		if(this.lower>this.upper){
-     		this.resize(this.upper*2);
+		var override = false;
+		for (var i = 0; i < bucket.length; i++) {
+			var touple = bucket[i];
+			if (touple[0] === key) {
+				touple[1] = value;
+				override = true;
+			}
 		}
+		if (!override) {
+			bucket.push([key, value]);
+			this.lower++;
+			if (this.lower > this.upper) {
+				this.resize(this.upper * 2);
+			}
 		}
 		return this;
 	};
-			hashtable.prototype.remove=function(key){
-			var index=this.hashFunction(key,this.upper);
-			var bucket=this.array[index];
-			if(!bucket){
+	/**
+	* adding methos to hashtable by using prototype
+	*@constructor
+	*@param{number}-key given key value
+	*/
+	hashtable.prototype.remove = function(key) {
+		var index = this.hashFunction(key, this.upper);
+		var bucket = this.array[index];
+		if (!bucket) {
 			return null;
-			}
-				for(var i=0;i<bucket.length;i++){
-				var touple=bucket[i];
-				if(touple[0]===key){
-				bucket.splice(i,1);
+		}
+		for (var i = 0; i < bucket.length; i++) {
+			var touple = bucket[i];
+			if (touple[0] === key) {
+				bucket.splice(i, 1);
 				this.lower--;
-				if(this.lower<this.upper){
-    				this.resize(this.upper/2);
+				if (this.lower < this.upper) {
+					this.resize(this.upper / 2);
 				}
 				return touple[1];
-				}
-				}
-			};
-				hashtable.prototype.retrive=function(key){
-				var index=this.hashFunction(key,this.upper);
-                                var bucket=this.array[index];
-                                if(!bucket){
-                                 return null;
-                                 }
-                                 	for(var i=0;i<bucket.length;i++){
-                                     	var touple=bucket[i];
-                                     	if(touple[0]===key){
-                                      	return touple[1];
-                                      	}
-                                      	}
-                                    	 return null;
-                                 };
-                                      /*
-                                      hashtable.prototype.resize=function(newlimit){
-                                       var oldsize=this.array;
-                                       this.lower=0;
-                                       this.upper=newlimit;
-                                       this.array=[];
-                                       oldsize.forEach(function(bucket){
-                                       if(!bucket){
-                                         return;
-                                       }
-                                    	for(var i=0;i<bucket.length;i++){
-                                     	var touple=bucket[i];
-                                         this.insert(touple[0],touple[1]);
-                                      }
-                                      }.bind(this));
-                                     };*/
-                                       
-					hashtable.prototype.hashFunction=function(key,range){
-					var hash=0;
-					hash=key%range;
-					return hash;
-					};
+			}
+		}
+	};
+	/**
+	*@constructor
+	*@param{number}-key
+	*@return hashtable value
+	*/
+	hashtable.prototype.retrive = function(key) {
+		var index = this.hashFunction(key, this.upper);
+		var bucket = this.array[index];
+		if (!bucket) {
+			return null;
+		}
+		for (var i = 0; i < bucket.length; i++) {
+			var touple = bucket[i];
+			if (touple[0] === key) {
+				return touple[1];
+			}
+		}
+		return null;
+	};
+	/**
+*@constructor
+*@param{number}-key
+*@param{number}-range
+*/
+	hashtable.prototype.hashFunction = function(key, range) {
+		var hash = 0;
+		hash = key % range;
+		return 
 
-
-var hasht=new hashtable();
-hasht.insert(10,"habeeb");
-hasht.insert(12,"akkar");
-hasht.insert(55,"welcome to beidgelabz");
-hasht.insert(10,"hahahaha");
-document.write(hasht.retrive(10));
-for(var i=0;i<bucket.length;i++)
-document.write
-
-
+/**
+*creting instance of hashtable
+*/
+	var hasht = new hashtable();
+	hasht.insert(10, "habeeb");
+	hasht.insert(12, "akkar");
+	hasht.insert(55, "welcome to beidgelabz");
+	hasht.insert(10, "hahahaha");
+	for (var i = 0; i <array.length; i++)
+	       document.write(array[i]+"<br>");
 </script>

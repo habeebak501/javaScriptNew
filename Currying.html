@@ -1,0 +1,55 @@
+/**
+*@fileName:Currying.html
+*@createBy:Habeeb
+*date:
+*purpose:To Show Standard Coding Convention */
+<script>
+    /**
+     *add two numbers using currying method
+     *@function
+     *@param{number}-a  passing a value
+     *@return{function}
+     *@param{number}-b passing b value
+     *@return{number} addition of two numbers
+     */
+    var addition = function(a) {
+        return function(b) {
+            return a + b;
+        }
+    };
+    /**
+     *subtraction two numbers using currying method
+     *@function
+     *@param{number}-a  passing a value
+     *@return{function}
+     *@param{number}-b passing b value
+     *@return{number} subtract of two numbers
+     */
+    var subtraction = function(a) {
+        return function(b) {
+            return a - b;
+        }
+    };
+    /**
+     *multiplication two numbers using currying method
+     *@function
+     *@param{number}-a  passing a value
+     *@return{function}
+     *@param{number}-b passing b value
+     *@return{number} multiplication of two numbers
+     */
+    var multiplication = function(a) {
+        return function(b) {
+            return a * b;
+        }
+    };
+    var add = addition(10);
+    var addto = add(20);
+    document.write("addition of two numbers: " + addto + "<br>");
+    var sub = subtraction(20);
+    var subto = sub(10);
+    document.write("subtraction of two numbers: " + subto + "<br>");
+    var mul = multiplication(10);
+    var multo = mul(10);
+    document.write("multiplication of two numbers: " + multo + "<br>");
+</script>
