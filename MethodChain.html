@@ -1,0 +1,47 @@
+/**
+ *@fileName:MethodChain.html
+ *@createBy:Habeeb
+  *@date:
+  *@purpose:To Show Standard Coding Convention */
+<script>
+    /**
+     *to create calculate prototype
+     *@constructor
+     *@this{number}-num1
+     *@this{number}-num2
+     */
+    var calculate = function() {
+            this.num1 = 0;
+            this.num2 = 0;
+        }
+        /**
+         *@methodChain
+         *@constructor
+         *@param {number}-num1 to pass the value to the  first function
+         */
+    calculate.prototype.First = function(num1) {
+            this.num1 = num1;
+        }
+        /**
+         *@constructor
+         *@param{number}-num2 to pass the value to the second function
+         */
+    calculate.prototype.Second = function(num2) {
+            this.num2 = num2;
+        }
+        /**
+         *@constructor
+         *@the sum function is adding the two variable in above functions
+         */
+    calculate.prototype.sum = function() {
+            var result = this.num1 + this.num2;
+            document.write("the result is " + result);
+        }
+        /**
+         * abc is an instance of calculate
+         */
+    var abc = new calculate();
+    abc.First(10);
+    abc.Second(20);
+    abc.sum();
+</script>

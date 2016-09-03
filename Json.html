@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /** *@fileName:Json.html
  *@createBy:habeeb
  *@date:
@@ -59,3 +60,55 @@
     document.write(JSON.stringify(collection[2468]) + "<br>");
     document.write("................................");
 </script>
+=======
+/**
+*@fileName:Json.html
+*@createBy:Habeeb
+*@date:
+*purpose:To Show Standard Coding Convention
+*/
+<html>
+<title>json</title>
+<body>
+<p id = "demo"></p>
+<p id ="demo1"></p>
+<p id ="demo2"></p>
+<script>
+/**
+*@to create a JSON file
+*/
+var text = [
+
+{"author":"habeeb","publication":"how","content":"are u???????????"},
+{"author":"vamshi","publication":"what","content":"are r u dng"},
+{"author":"raju","publication":"doing","content":"programs"}  ] ;
+           var i;
+           /**
+           *@constructor
+           *@param {string}-i passing the 0 value to the function
+           */
+          function myfunction(i){
+
+
+        document.write(text[i].author + " " +text[i].publication + " " +text[i].content +"<br>");
+               // setTimeout(myfunction,2000,0);
+               if( i <= text.length){
+               document.write(i+"<br>");
+                         i++;
+                   setTimeout(myfunction,2000,i);
+                         // i++;
+         }
+
+            //i++;
+     }
+             // myfunction(0);
+
+      setTimeout(myfunction,2000,0);
+
+
+
+</script>
+
+</body>
+</html>
+>>>>>>> af5da5779982191c1f6a2de63e596528db5d4a11

@@ -1,0 +1,66 @@
+/**
+*@fileName:json1.html
+*@createBy:Habeeb
+*@date:
+*@purpose:To Show Standard Coding Conversion
+*/
+<html>
+<title>json</title>
+<body>
+<center>
+<p id = "demo1">welcome to the bridgelabz</p>
+<p id ="demo2"></p>
+<p id ="demo"></p>
+
+<script>
+
+var text = [
+
+{"author":"habeeb","publication":"how","content":"are u???????????"},
+{"author":"vamshi","publication":"what","content":"are r u dng"},
+{"author":"raju","publication":"doing","content":"programs"}
+ ] ;
+     /**
+     *@constructor
+     *@ the function used to generate the time &date
+     */
+
+		function startTime() {
+   		 var today = new Date();
+   		 var h = today.getHours();
+   		 var m = today.getMinutes();
+   		 var s = today.getSeconds();
+   		 m = checkTime(m);
+   		 s = checkTime(s);
+   		 document.getElementById('demo2').innerHTML =
+   		 h + ":" + m + ":" + s;
+   		 var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+    		if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    		return i;
+		}
+
+
+
+              var i;
+              function myfunction(i){
+
+               var x = document.getElementById("demo1");
+                    x.style.color = "red";
+                 document.getElementById("demo2").innerHTML = startTime();
+               document.getElementById("demo").innerHTML = text[i].author + " " +text[i].publication + " " +text[i].content;
+
+              if(i < text.length){
+              i++;
+             //setTimeout('myfunction('+(i)+')',5000);
+                setTimeout(myfunction,5000,i);
+              }
+
+        }
+            //myfunction(0);
+               setTimeout(myfunction,5000,0);
+</script>
+</center>
+</body>
+</html>

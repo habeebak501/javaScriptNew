@@ -1,0 +1,122 @@
+/**
+*@fileName:HashTable.html
+*@createBy:Habeeb
+*@date:
+*@purpose:To Show Standard Coding Convention
+*/
+<script>
+/**
+*@ to create hashTable prototype
+*@constructor
+*@this{object}-array
+*/
+var hashTable=function(){
+this.array=[];
+this.limit=10;
+this.count=0;
+}
+/**
+*@constructor
+*@param{number}-key passing the number into the function
+*@param{string}-value passing the string into the function
+*/
+	hashTable.prototype.insert=function(key,value){
+	var index=this.hashFun(key,this.limit);
+	var bucket=this.array[index];
+	if(!bucket){
+	var bucket=[];
+	this.array[index]=bucket;
+	}
+	var override=false;
+	for(var i=0;i<bucket.length;i++){
+	var touple=bucket[i];
+	if(touple[0]===key){
+	touple[1]=value;
+	override=true;
+	}
+	}
+	if(!override){
+	bucket.push([key,value]);
+	this.count++;
+	}
+	return this;
+	};
+	/**
+	*@ remove function is used to remove the key and value
+	*@constructor
+	*@param{number}-key passing the number into the function
+	*/
+		hashTable.prototype.remove = function(key){
+		var index = this.hashFun(key,this.limit);
+		var bucket = this.array[index];
+				if(!bucket){
+					return null;
+				}
+				for(var i = 0;i<bucket.length;i++){
+					var data = bucket[i];
+				}
+				if(data[0] === key){
+					this.array.splice(index,1);
+					return data[1];
+				}
+		return null;
+	}
+/**
+*@retrive function is used to retrive the data from hashTable
+*@constructor
+*@param{number}-key passing the value into the function
+*/
+
+			hashTable.prototype.retrive=function(key){
+			var index=this.hashFun(key,this.limit);
+			var bucket=this.array[index];
+			if(!bucket){
+			return null;
+			}
+			for(var i=0;i<bucket.length;i++){
+			var tuple=bucket[i];
+                         }
+			if(tuple[0]===key){
+			return tuple[1];
+			}
+			return null;
+			}
+			/**
+			*@hashFun is divisible by key and length of hashTable
+			*@constructor
+			*@param{value}-str passing the key value into the function
+			*@param{value}-value passing the limit into the function
+			*@return{value}-hash
+			*/
+				hashTable.prototype.hashFun=function(str,value){
+				var hash=0;
+				hash=str%value;
+				return hash;
+				};
+					hashTable.prototype.retriveAll=function(){
+					for(var i=0;i<this.array.length;i++){
+					document.write("array[key,value]="+"array["+i+"]: "+this.array[i]+"<br>");
+                                            document.write("<br>");
+					}
+					};
+					/**
+					*creating instance of hashTable
+					*/
+var hashT=new hashTable();
+document.write("inserting elements in the hashtable:"+"<br>");
+hashT.insert(1 ,"habeeb");
+hashT.insert(2,"akkar");
+hashT.insert(3,"chandu");
+hashT.insert(4,"srikanth");
+hashT.insert(55,"hhhh");
+hashT.insert(10,"bbbb");
+hashT.insert(22,"cccc");
+hashT.insert(66,"kkkk");
+hashT.insert(88,"llll");
+hashT.retriveAll();
+document.write("retriving the the element from the hashtable:"+"<br>");
+document.write(hashT.retrive(1)+"<br>");
+document.write("removing the element from the hashtable:"+"<br>");
+document.write(hashT.remove(88)+"<br>");
+hashT.retriveAll();
+</script>

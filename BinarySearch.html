@@ -1,0 +1,62 @@
+/**
+*@fileName:BinarySearch.html
+*@createBy:Habeeb
+*@date:
+*purpose:To Show Standard Coding Convention
+*/
+
+<script>
+var tree=function(){
+
+   		 var Node = function (leftChild,value, rightChild, parent) {
+            		return {
+                	leftChild: (typeof leftChild === "undefined") ? null :
+                           leftChild,
+                	//key: (typeof key === "undefined") ? null : key,
+                	value: (typeof value === "undefined") ? null : value,
+                	rightChild: (typeof rightChild === "undefined") ? null :
+                            rightChild,
+                	parent: (typeof parent === "undefined") ? null : parent
+           	 }
+},
+              root = new Node(),
+
+                 tree.prototype.insertNode = function (node,value,parent) {
+            if (node.value === null) {
+                node.leftChild = new Node();
+                node.value = value;
+               // node.value = value;
+                node.rightChild = new Node();
+                node.parent = parent;
+                return true;
+            }
+
+          //  var nodeKey = parseInt(node.value, 10);
+
+            if (node.value < parent) {
+                insertNode(node.leftChild,value, node);
+            } else if (node.value > parent) {
+                insertNode(node.rightChild,value, node);
+            } else { // key is equal to node key, update the value
+                //node.value = value;
+                return true;
+            }
+        };
+
+             tree.prototype.traverseNode = function (node, callback) {
+            if (node.value!== null) {
+                traverseNode(node.leftChild, callback);
+                callback(node.value);
+                traverseNode(node.rightChild, callback);
+            }
+
+            return true;
+            }
+ };
+var temp=new tree();
+temp.insertNode(10);
+temp.insertNode(5);
+temp.insertNode(2);
+temp.insertNode(7);
+temp.traverseNode();
+</script>

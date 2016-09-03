@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <script>
 var console ={num:"bridgeit"};
 function log(){
@@ -9,3 +10,47 @@ function log(){
 //log('Bridgelabz'); //(app) my message
 console.log( 'your message'); //(app) my message your message 
         </script>
+=======
+<html>
+
+<head>
+    <title>bridgeit</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+    var str = {
+        num: "bridgeit:"
+    };
+    /**
+     * decription of function
+     * @param {object}
+     * @rerun 
+     */
+    function myfunction(...args) {
+        for (i = 0; i < args.length; i++) {
+            /**
+             * print every args  
+             */
+            document.write(this + " " + args[i] + "<br>");
+        }
+}
+        var n = prompt("enter the range:"),
+            x = [];
+        for (var i = 0; i < n; i++) {
+            x[i] = prompt("enter the name:");
+        }
+        /**
+         *  we ues apply function
+         * @param {Number} --str.num
+         * @param {array}  --x is array
+         * @ return {}
+         */
+        myfunction.apply(str.num, x);
+    
+    </script>
+</body>
+
+</html>
+>>>>>>> af5da5779982191c1f6a2de63e596528db5d4a11

@@ -1,0 +1,49 @@
+/**
+*@fileName:Equality.html
+*@createBy:Habeeb
+*@date:
+*@purpose:To Show Standard Coding Convention
+*/
+<html>
+
+<head>
+    <title>euality</title>
+</head>
+
+<body>
+    <script>
+        /**
+         *compare two strings
+         *@constructor
+         *@param{strings}-a,b passing the two strings into the function
+         */
+        function eqality(a, b) {
+            if (a === b) {
+                document.write("both are equal" + "<br>");
+            } else {
+                document.write("both are not equal" + "<br>");
+            }
+        }
+
+        var obj1 = {
+            name: "habeeb",
+            address: "challapalli"
+        }
+        var obj2 = {
+                name: "akkar",
+                address: "challapalli"
+            }
+            /**
+             *@function calling
+             */
+        eqality(obj1, obj2);
+        document.write(".................................." + "<br>");
+        //var obj3 = obj2;
+        eqality(obj1.address, obj2.address);
+        //eqality(obj1,obj2);
+    </script>
+
+
+</body>
+
+</html>

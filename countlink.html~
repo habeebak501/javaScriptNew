@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>links</title>
+</head>
+
+<body>
+
+    <p>
+        <a href="/html/default.asp">HTML</a>
+        <br>
+        <a href="/css/default.asp">CSS</a>
+    </p>
+    <p id="demo1"></p>
+    <script>
+    /**
+    *@constructor
+    */
+        function myfunction() {
+            var x = document.links.length;
+            document.getElementById("demo1").innerHTML = x;
+        }
+    </script>
+    <input type="button" value="try" name="clickme" onclick="myfunction()" />
+</body>
+
+</html>

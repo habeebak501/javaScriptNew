@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
 *@fileName:Prefix.html
 *@createdBy:Habeeb
@@ -26,3 +27,43 @@ function log(){
 //log('Bridgelabz'); //(app) my message
 //console.log( 'your message'); //(app) my message your message
         </script>
+=======
+/** *@fileName:prefix.html *@createBy:Habeeb *@date: *purpose:To Show Standard Coding Conversion */
+<html>
+
+<head>
+    <title>bridgeit</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        /**
+         *@creating str object
+         */
+        var str = {
+            num: "bridgeit:"
+        };
+        /**
+         *@constructor
+         *@param{number}-args we have to take n no of arguments
+         */
+        function myfunction(...args) {
+            for (i = 0; i < args.length; i++) {
+                document.write(this + " " + args[i] + "<br>");
+            }
+        }
+        var n = prompt("enter the range:");
+
+        var x = [];
+        for (var i = 0; i < n; i++) {
+            x[i] = prompt("enter the name:");
+
+        }
+
+        myfunction.apply(str.num, x);
+    </script>
+</body>
+
+</html>
+>>>>>>> af5da5779982191c1f6a2de63e596528db5d4a11
